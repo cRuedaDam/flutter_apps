@@ -14,10 +14,11 @@ class StartScreen extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         //La columna espera una lista de Widgets
         children: [
-          //En primer lugar pasaremos una imagen
+          //En primer lugar pasaremos una imagen con opacidad
           Image.asset(
             'assets/images/quiz-logo.png',
             width: 300,
+            color: const Color.fromARGB(125, 255, 255, 255),
           ),
           //Añadimos un SizedBox para establecer un margen
           const SizedBox(
@@ -35,10 +36,12 @@ class StartScreen extends StatelessWidget {
           const SizedBox(
             height: 30,
           ),
-          OutlinedButton(
+          //Creamos un botón
+          OutlinedButton.icon(
             onPressed: () {},
             style: OutlinedButton.styleFrom(foregroundColor: Colors.white70),
-            child: const Text('Empezar test'),
+            icon: Icon(Icons.arrow_right_alt),
+            label: const Text('Empezar test'),
           )
         ],
       ),
